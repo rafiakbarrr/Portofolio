@@ -126,8 +126,8 @@
                     <a href="#experience" id="experienceNav"
                         class="hover:text-purple-400 transition-colors">Experience</a>
                     <a href="#education" id="educationNav" class="hover:text-purple-400 transition-colors">Education</a>
-                    <a href="#projects" id="projectNav" class="hover:text-purple-400 transition-colors">Projects</a>
-                    <a href="#skills" id="skillNav" class="hover:text-purple-400 transition-colors">Skills</a>
+                    <a href="#projects" id="projectsNav" class="hover:text-purple-400 transition-colors">Projects</a>
+                    <a href="#skills" id="skillsNav" class="hover:text-purple-400 transition-colors">Skills</a>
 
                     <!-- Language Switcher -->
                     <div class="relative">
@@ -175,7 +175,7 @@
     <!-- About Section -->
     <section id="about" class="py-20 px-6 animate-fadeInUp">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">About Me</h2>
+            <h2 id="aboutSec" class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">About Me</h2>
             <div class="grid md:grid-cols-2 gap-12 items-center ">
                 <div class="opacity-0 animate-slideInLeft">
                     <div class="relative">
@@ -187,8 +187,8 @@
                     </div>
                 </div>
                 <div class="opacity-0 animate-slideInRight delay-200">
-                    <h3 class="text-2xl font-semibold mb-6 text-purple-400">Halo! Saya Muhammad Rafi Akbar</h3>
-                    <p class="text-gray-300 mb-6 leading-relaxed">
+                    <h3 id="nameAbo" class="text-2xl font-semibold mb-6 text-purple-400">Halo! Saya Muhammad Rafi Akbar</h3>
+                    <p id="descAbo" class="text-gray-300 mb-6 leading-relaxed">
                         Lulusan Manajemen Informatika dari Politeknik Astra yang memiliki ketertarikan di bidang IT.
                         Memiliki kemampuan komunikasi, kepemimpinan, mampu bekerja dalam sebuah tim, dan mudah
                         beradaptasi dengan hal baru. Berpengalaman dalam mengerjakan proyek aplikasi berbasis desktop
@@ -198,11 +198,11 @@
                     <div class="flex space-x-4">
                         <a href="file/CV - Muhammad Rafi Akbar.pdf"
                             class="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg transition-colors">
-                            Download CV
+                            <p id="cvAbo">Download CV</p>
                         </a>
                         <button id="contactBtn"
                             class="border border-purple-600 hover:bg-purple-600 px-6 py-3 rounded-lg transition-colors">
-                            Contact Me
+                            <p id="contactAbo">Contact Me</p>
                         </button>
                     </div>
                 </div>
@@ -210,7 +210,7 @@
         </div>
         <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
             <div class="bg-gray-900 p-6 rounded-lg shadow-lg text-center">
-                <h3 class="text-xl font-semibold mb-4 text-purple-400">Hubungi Saya</h3>
+                <h3 id="contactMod" class="text-xl font-semibold mb-4 text-purple-400">Hubungi Saya</h3>
                 <div class="flex flex-col space-y-3">
                     <a onclick="contactWhatsApp()"
                         class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg flex items-center gap-2">
@@ -260,7 +260,7 @@
                         </svg> Gmail
                     </a>
                 </div>
-                <button id="closeModal" class="mt-6 text-gray-400 hover:text-white">Tutup</button>
+                <button id="closeModal" class="mt-6 text-gray-400 hover:text-white">Close</button>
             </div>
         </div>
 
@@ -269,11 +269,11 @@
     <!-- Experience Section -->
     <section id="experience" class="py-20 px-6 bg-black/20">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">Experience</h2>
+            <h2 id="experienceSec" class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">Experience</h2>
 
             <!-- Work Experience -->
             <div class="mb-16">
-                <h3 class="text-2xl font-semibold mb-8 text-purple-400 opacity-0 animate-slideInLeft">Pengalaman Kerja
+                <h3 id="workExp" class="text-2xl font-semibold mb-8 text-purple-400 opacity-0 animate-slideInLeft">Pengalaman Kerja
                 </h3>
                 <div class="space-y-8">
                     <div class="bg-gray-800/50 rounded-lg p-6 opacity-0 animate-slideInRight delay-100">
@@ -286,11 +286,11 @@
                                 <h4 class="text-xl font-semibold text-white">Full Stack Developer</h4>
                                 <p class="text-purple-400 mb-2">PT Astra Honda Motor Internship • Des 2024 - Jul 2025
                                 </p>
-                                <p class="text-gray-300 mb-4">
+                                <p id="descExp" class="text-gray-300 mb-4">
                                     Mengimplementasikan background job Hangfire pada aplikasi Material Master Data
-                                    dengan framework Java Springboot dan .NET. Dengan fitur <strong>Retry Job</strong>
-                                    otomatis dan <strong>Dashboard</strong>.
-                                    Berhasil mengurangi jumlah <strong>Deadlock</strong> pada sistem dan menghilangkan
+                                    dengan framework Java Springboot dan .NET. Dengan fitur Retry Job
+                                    otomatis dan Dashboard.
+                                    Berhasil mengurangi jumlah Deadlock pada sistem dan menghilangkan
                                     intervensi manual oleh tim IT
                                 </p>
                                 <div class="flex flex-wrap gap-2">
@@ -311,7 +311,7 @@
 
             <!-- Organization Experience -->
             <div>
-                <h3 class="text-2xl font-semibold mb-8 text-purple-400 opacity-0 animate-slideInLeft">Pengalaman
+                <h3 id="organizationExp" class="text-2xl font-semibold mb-8 text-purple-400 opacity-0 animate-slideInLeft">Pengalaman
                     Organisasi</h3>
                 <div class="space-y-8">
                     <div class="bg-gray-800/50 rounded-lg p-6 opacity-0 animate-slideInRight delay-100">
@@ -320,11 +320,11 @@
                                 <img src="asset/MI.jpeg" alt="" class="w-full h-full object-contain">
                             </div>
                             <div class="flex-1">
-                                <h4 class="text-xl font-semibold text-white">Kepala Departemen Pendidikan
+                                <h4 id="positionExp" class="text-xl font-semibold text-white">Kepala Departemen Pendidikan
                                 </h4>
                                 <p class="text-purple-400 mb-2">Himpunan Mahasiswa Manajemen Informatika Politeknik
                                     Astra • Feb 2024 - Des 2024</p>
-                                <p class="text-gray-300 mb-4">
+                                <p id="descorgExp" class="text-gray-300 mb-4">
                                     Memimpin sebuah departemen pendidikan berisi 17 anggota aktif, Mengadakan seminar
                                     yang berkaitan dengan IT dengan narasumber luar/dalam kampus, Mengadakan Mentoring
                                     secara berkelompok untuk mahasiswa, Merancang modul pembelajaran serta pembuatan
@@ -341,7 +341,7 @@
     <!-- Education Section -->
     <section id="education" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">Pendidikan</h2>
+            <h2 id="educationSec" class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">Pendidikan</h2>
             <div class="max-w-3xl mx-auto">
                 <div class="bg-gray-800/50 rounded-lg p-8 opacity-0 animate-slideInUp delay-100">
                     <div class="flex items-start space-x-6">
@@ -350,12 +350,12 @@
                             <img src="asset/astra.png" alt="" class="w-full h-full object-contain scale-110">
                         </div>
                         <div class="flex-1">
-                            <h3 class="text-2xl font-semibold text-white mb-2">Diploma 3 Manajemen Informatika</h3>
-                            <p class="text-purple-400 text-lg mb-3">Politeknik Astra • 2022 - 2025</p>
-                            <p class="text-gray-300 mb-4">
+                            <h3 id="majorEdu" class="text-2xl font-semibold text-white mb-2">Diploma 3 Manajemen Informatika</h3>
+                            <p id="locationEdu" class="text-purple-400 text-lg mb-3">Politeknik Astra • 2022 - 2025</p>
+                            <p id="GpaEdu" class="text-gray-300 mb-4">
                                 IPK: 3.73/4.00
                             </p>
-                            <p class="text-gray-300 mb-6">
+                            <p id="descEdu" class="text-gray-300 mb-6">
                                 Fokus pada pengembangan software dan manajemen teknologi informasi di berbagai bidang.
                                 Tugas akhir tentang "Implementasi Hangfire dan Otomatisasi Sales Value pada Pengelolaan
                                 Material Produksi di PT Unggul Lancar Sejahtera"
@@ -377,7 +377,7 @@
     <!-- Projects Section -->
     <section id="projects" class="py-20 px-6 bg-black/20">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">Projects</h2>
+            <h2 id="projectsSec" class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div
                     class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500">
@@ -388,7 +388,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">Astra Honda Motor Application System Phase 3</h3>
                         <p class="text-gray-300 mb-4">
-                            <i>Detail project bersifat rahasia</i>
+                            <i id="descPro1">Detail project bersifat rahasia</i>
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">Springboot</span>
@@ -409,7 +409,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">Astra Honda Motor Application System Phase 2</h3>
                         <p class="text-gray-300 mb-4">
-                            <i>Detail project bersifat rahasia</i>
+                            <i id="descPro2">Detail project bersifat rahasia</i>
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">Springboot</span>
@@ -436,7 +436,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">IPP Performance</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p id="descPro3" class="text-gray-300 mb-4">
                             Aplikasi pencatatan performa karyawan pada prodi TRPAB berbasis mobile, memudahkan
                             monitoring performa karyawan dengan rekapitulasi setiap kegiatan.
                         </p>
@@ -466,7 +466,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">Teaching Factory</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p id="descPro4" class="text-gray-300 mb-4">
                             Aplikasi pendataan layanan pada sekolah SMK binaan Astra berbasis mobile, memfasilitasi
                             proses rekapitulasi dan menghasilkan laporan transaksi pelayanan, membuat manajemen
                             transaksi lebih efisien.
@@ -497,7 +497,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">Sistem Informasi Organisasi Kemahasiswaan</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p id="descPro5" class="text-gray-300 mb-4">
                             Website yang memuat informasi seputar Organisasi Kemahasiswaan (ORMAWA) dan Unit Kegiatan
                             Mahasiswa (UKM), menyediakan profil dari masing-masing ORMAWA dan UKM serta menyediakan
                             halaman pendaftaran UKM untuk mahasiswa Politeknik Astra. Pembuatan website ini menggunakan
@@ -531,7 +531,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">HaloDeck</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p id="descPro6" class="text-gray-300 mb-4">
                             Aplikasi layanan kesehatan berbasis desktop, menyediakan berbagai layanan konsultasi,
                             pemeriksaan, dan pembelian obat. Aplikasi ini akan memudahkan pengelolaan riwayat transaksi
                             pasien dan pengolahan data laporan. Pembuatan aplikasi ini menggunakan 2 versi bahasa
@@ -564,7 +564,7 @@
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">NusanTari</h3>
-                        <p class="text-gray-300 mb-4">
+                        <p id="descPro7" class="text-gray-300 mb-4">
                             Aplikasi penyewaan sanggar tari berbasis desktop, yang dikembangkan untuk membantu karyawan
                             menjalankan proses bisnis penyewaan studio tari. Dengan aplikasi ini, diharapkan dapat
                             memudahkan pengelolaan data anggota, data penyewaan termasuk studio, pelatih dan kostum,
@@ -589,7 +589,7 @@
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
-            <h2 class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">Skills & Technologies</h2>
+            <h2 id="skillsSec" class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">Skills & Technologies</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center opacity-0 animate-fadeInUp delay-100">
                     <div class="space-y-4">
@@ -765,7 +765,7 @@
         <div class="container mx-auto max-w-6xl">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <div class="opacity-0 animate-fadeInUp delay-100">
-                    <h3 class="text-xl font-semibold mb-4 text-purple-400">Kontak</h3>
+                    <h3 id="contactFoo" class="text-xl font-semibold mb-4 text-purple-400">Kontak</h3>
                     <div class="space-y-2 text-gray-300">
                         <p>📧 rafiakbar2525@gmail.com</p>
                         <p>📱 +62 813-1697-5711</p>
@@ -773,7 +773,7 @@
                     </div>
                 </div>
                 <div class="opacity-0 animate-fadeInUp delay-200">
-                    <h3 class="text-xl font-semibold mb-4 text-purple-400">Social Media</h3>
+                    <h3 id="socialFoo" class="text-xl font-semibold mb-4 text-purple-400">Social Media</h3>
                     <div class="flex space-x-4">
                         <a href="https://www.instagram.com/rafiakbarrr___/" target="_blank"
                             class="text-gray-300 hover:text-purple-400 transition-colors">
@@ -794,14 +794,14 @@
                     </div>
                 </div>
                 <div class="opacity-0 animate-fadeInUp delay-300">
-                    <h3 class="text-xl font-semibold mb-4 text-purple-400">Quick Links</h3>
+                    <h3 id="linkFoo" class="text-xl font-semibold mb-4 text-purple-400">Quick Links</h3>
                     <div class="space-y-2">
-                        <a href="#about" class="block text-gray-300 hover:text-purple-400 transition-colors">About</a>
-                        <a href="#experience"
+                        <a id="aboutFoo" href="#about" class="block text-gray-300 hover:text-purple-400 transition-colors">About</a>
+                        <a id="experienceFoo" href="#experience"
                             class="block text-gray-300 hover:text-purple-400 transition-colors">Experience</a>
-                        <a href="#projects"
+                        <a id="projectsFoo" href="#projects"
                             class="block text-gray-300 hover:text-purple-400 transition-colors">Projects</a>
-                        <a href="#skills" class="block text-gray-300 hover:text-purple-400 transition-colors">Skills</a>
+                        <a id="skillsFoo" href="#skills" class="block text-gray-300 hover:text-purple-400 transition-colors">Skills</a>
                     </div>
                 </div>
             </div>
@@ -835,8 +835,8 @@
             document.getElementById('aboutNav').textContent = translations[lang].aboutNav;
             document.getElementById('experienceNav').textContent = translations[lang].experienceNav;
             document.getElementById('educationNav').textContent = translations[lang].educationNav;
-            document.getElementById('projectNav').textContent = translations[lang].projectsNav;
-            document.getElementById('skillNav').textContent = translations[lang].skillsNav;
+            document.getElementById('projectsNav').textContent = translations[lang].projectsNav;
+            document.getElementById('skillsNav').textContent = translations[lang].skillsNav;
 
             document.getElementById('langText').textContent = lang.toUpperCase();
             document.getElementById('langDropdown').classList.add('hidden');
@@ -846,7 +846,7 @@
         document.getElementById('langBtn').addEventListener('click', () => {
             document.getElementById('langDropdown').classList.toggle('hidden');
         });
-        
+
         contactBtn.addEventListener("click", () => {
             contactModal.classList.remove("hidden");
             contactModal.classList.add("flex"); // Biar modal muncul dengan flexbox
@@ -878,6 +878,8 @@
                 }
             });
         }, observerOptions);
+
+       
         // Observe semua elemen dengan class opacity-0
         document.querySelectorAll('.opacity-0').forEach(el => {
             observer.observe(el);
@@ -941,4 +943,3 @@
 </body>
 
 </html>
-
