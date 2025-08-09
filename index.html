@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio - Akbar</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <style>
         @keyframes fadeInUp {
             from {
@@ -115,13 +117,37 @@
     <nav class="fixed top-0 w-full bg-black/20 backdrop-blur-md z-50 animate-fadeInUp">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
+                <!-- Logo -->
                 <h1 class="text-2xl font-bold text-purple-400">Portofolio</h1>
-                <div class="hidden md:flex space-x-6">
-                    <a href="#about" class="hover:text-purple-400 transition-colors">About</a>
-                    <a href="#experience" class="hover:text-purple-400 transition-colors">Experience</a>
-                    <a href="#education" class="hover:text-purple-400 transition-colors">Pendidikan</a>
-                    <a href="#projects" class="hover:text-purple-400 transition-colors">Projects</a>
-                    <a href="#skills" class="hover:text-purple-400 transition-colors">Skills</a>
+
+                <!-- Menu -->
+                <div class="hidden md:flex space-x-6 items-center">
+                    <a href="#about" id="aboutNav" class="hover:text-purple-400 transition-colors">About</a>
+                    <a href="#experience" id="experienceNav"
+                        class="hover:text-purple-400 transition-colors">Experience</a>
+                    <a href="#education" id="educationNav" class="hover:text-purple-400 transition-colors">Education</a>
+                    <a href="#projects" id="projectNav" class="hover:text-purple-400 transition-colors">Projects</a>
+                    <a href="#skills" id="skillNav" class="hover:text-purple-400 transition-colors">Skills</a>
+
+                    <!-- Language Switcher -->
+                    <div class="relative">
+                        <button id="langBtn"
+                            class="bg-purple-600 text-white px-3 py-1 rounded-md text-sm flex items-center space-x-1 hover:bg-purple-700 transition">
+                            <span id="langText">EN</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="langDropdown"
+                            class="hidden absolute right-0 mt-1 bg-gray-800 text-white rounded-md shadow-lg overflow-hidden">
+                            <button onclick="setLanguage('en')"
+                                class="block w-full px-4 py-2 hover:bg-purple-600 text-left">English</button>
+                            <button onclick="setLanguage('id')"
+                                class="block w-full px-4 py-2 hover:bg-purple-600 text-left">Indonesia</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -147,10 +173,10 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-20 px-6">
+    <section id="about" class="py-20 px-6 animate-fadeInUp">
         <div class="container mx-auto max-w-6xl">
             <h2 class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">About Me</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid md:grid-cols-2 gap-12 items-center ">
                 <div class="opacity-0 animate-slideInLeft">
                     <div class="relative">
                         <div class="w-80 h-80 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-pink-500 p-1">
@@ -354,8 +380,9 @@
             <h2 class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden opacity-0 animate-fadeInUp delay-100">
-                    <div class="h-48 bg-white from-purple-500 to-pink-500 flex items-center justify-center">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500">
+                    <div
+                        class="h-48 bg-white from-green-500 to-teal-500 flex items-center justify-center overflow-hidden">
                         <img src="asset/ahmLogo2.png" alt="" class="w-full h-full object-contain">
                     </div>
                     <div class="p-6">
@@ -373,10 +400,10 @@
                         </div>
                     </div>
                 </div>
-
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden opacity-0 animate-fadeInUp delay-200">
-                    <div class="h-48 bg-white from-purple-500 to-pink-500 flex items-center justify-center">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500">
+                    <div
+                        class="h-48 bg-white from-green-500 to-teal-500 flex items-center justify-center overflow-hidden">
                         <img src="asset/ahmLogo2.png" alt="" class="w-full h-full object-contain">
                     </div>
                     <div class="p-6">
@@ -394,11 +421,18 @@
                         </div>
                     </div>
                 </div>
-
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden opacity-0 animate-fadeInUp delay-300">
-                    <div class="h-48 bg-white from-green-500 to-teal-500 flex items-center justify-center">
-                        <img src="asset/ipp.jpeg" alt="" class="w-full h-full object-contain">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500 group">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 relative overflow-hidden">
+                        <!-- Thumbnail -->
+                        <img src="asset/thIPP.png" alt="Thumbnail"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+
+                        <!-- Video -->
+                        <video src="asset/vidIPP.mp4"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                            muted loop preload="none">
+                        </video>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">IPP Performance</h3>
@@ -418,9 +452,17 @@
                     </div>
                 </div>
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden opacity-0 animate-fadeInUp delay-100">
-                    <div class="h-48 bg-white from-purple-500 to-pink-500 flex items-center justify-center">
-                        <img src="asset/tefa.png" alt="" class="w-full h-full object-contain">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500 group">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 relative overflow-hidden">
+                        <!-- Thumbnail -->
+                        <img src="asset/thTefa.png" alt="Thumbnail"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+
+                        <!-- Video -->
+                        <video src="asset/vidTefa.mp4"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                            muted loop preload="none">
+                        </video>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">Teaching Factory</h3>
@@ -440,11 +482,18 @@
                         </div>
                     </div>
                 </div>
-
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden opacity-0 animate-fadeInUp delay-200">
-                    <div class="h-48 bg-white from-blue-500 to-cyan-500 flex items-center justify-center">
-                        <img src="asset/siok.png" alt="" class="w-full h-full object-contain">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500 group">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 relative overflow-hidden">
+                        <!-- Thumbnail -->
+                        <img src="asset/thSiok.png" alt="Thumbnail"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+
+                        <!-- Video -->
+                        <video src="asset/vidSiok.mp4"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                            muted loop preload="none">
+                        </video>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">Sistem Informasi Organisasi Kemahasiswaan</h3>
@@ -467,12 +516,18 @@
                         </div>
                     </div>
                 </div>
-
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden opacity-0 animate-fadeInUp delay-300">
-                    <div
-                        class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center overflow-hidden">
-                        <img src="asset/halodeck.png" alt="" class="w-full h-full object-contain scale-110">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500 group">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 relative overflow-hidden">
+                        <!-- Thumbnail -->
+                        <img src="asset/thHalodeck.png" alt="Thumbnail"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+
+                        <!-- Video -->
+                        <video src="asset/vidHalodeck.mp4"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                            muted loop preload="none">
+                        </video>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">HaloDeck</h3>
@@ -493,13 +548,19 @@
                             <a href="#" class="text-purple-400 hover:text-purple-300">GitHub</a>
                         </div>
                     </div>
-
                 </div>
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden opacity-0 animate-fadeInUp delay-300">
-                    <div
-                        class="h-48 bg-gradient-to-r from-green-500 to-teal-500 flex items-center justify-center overflow-hidden">
-                        <img src="asset/nusantari.jpg" alt="" class="w-full h-full object-contain scale-110">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500 group">
+                    <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 relative overflow-hidden">
+                        <!-- Thumbnail -->
+                        <img src="asset/thNusantari.png" alt="Thumbnail"
+                            class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 group-hover:opacity-0">
+
+                        <!-- Video -->
+                        <video src="asset/vidNusantari.mp4"
+                            class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                            muted loop preload="none">
+                        </video>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">NusanTari</h3>
@@ -519,8 +580,8 @@
                             <a href="#" class="text-purple-400 hover:text-purple-300">GitHub</a>
                         </div>
                     </div>
-
                 </div>
+
             </div>
         </div>
     </section>
@@ -756,7 +817,36 @@
         const contactBtn = document.getElementById("contactBtn");
         const contactModal = document.getElementById("contactModal");
         const closeModal = document.getElementById("closeModal");
+        let translations = {};
 
+        // Ambil file JSON
+        fetch('lang.json')
+            .then(res => res.json())
+            .then(data => {
+                translations = data;
+                setLanguage('en'); // default bahasa
+            })
+            .catch(err => console.error("Gagal memuat lang.json", err));
+
+        // Fungsi ganti bahasa
+        function setLanguage(lang) {
+            if (!translations[lang]) return; // kalau belum ada data, stop
+
+            document.getElementById('aboutNav').textContent = translations[lang].aboutNav;
+            document.getElementById('experienceNav').textContent = translations[lang].experienceNav;
+            document.getElementById('educationNav').textContent = translations[lang].educationNav;
+            document.getElementById('projectNav').textContent = translations[lang].projectsNav;
+            document.getElementById('skillNav').textContent = translations[lang].skillsNav;
+
+            document.getElementById('langText').textContent = lang.toUpperCase();
+            document.getElementById('langDropdown').classList.add('hidden');
+        }
+
+        // Toggle dropdown saat tombol bahasa diklik
+        document.getElementById('langBtn').addEventListener('click', () => {
+            document.getElementById('langDropdown').classList.toggle('hidden');
+        });
+        
         contactBtn.addEventListener("click", () => {
             contactModal.classList.remove("hidden");
             contactModal.classList.add("flex"); // Biar modal muncul dengan flexbox
@@ -789,11 +879,26 @@
             });
         }, observerOptions);
 
+        document.getElementById('langBtn').addEventListener('click', () => {
+            document.getElementById('langDropdown').classList.toggle('hidden');
+        });
         // Observe semua elemen dengan class opacity-0
         document.querySelectorAll('.opacity-0').forEach(el => {
             observer.observe(el);
         });
 
+        document.querySelectorAll('.project-card').forEach(card => {
+            const video = card.querySelector('video');
+
+            card.addEventListener('mouseenter', () => {
+                video.play();
+            });
+
+            card.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 0;
+            });
+        });
         // Smooth scrolling untuk navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -817,7 +922,7 @@
             window.open(url, '_blank');
         }
         function contactEmail() {
-            let email = "rafiakbar2525@gmail.com"; 
+            let email = "rafiakbar2525@gmail.com";
             let subject = "Halo Rafi";
             let body = "Halo, saya ingin menghubungi Anda.";
             let url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
