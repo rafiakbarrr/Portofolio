@@ -1,0 +1,16 @@
+{
+    "id": {
+        "aboutNav": "Tentang",
+        "experienceNav": "Pengalaman",
+        "educationNav": "Edukasi",
+        "projectNav": "Proyek",
+        "skillNav": "Kemampuan"
+    },
+    "en": {
+        "aboutNav": "About",
+        "experienceNav": "Experience",
+        "educationNav": "Education",
+        "projectNav": "Project",
+        "skillNav": "Skill"
+    }
+}
