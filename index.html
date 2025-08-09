@@ -878,10 +878,6 @@
                 }
             });
         }, observerOptions);
-
-        document.getElementById('langBtn').addEventListener('click', () => {
-            document.getElementById('langDropdown').classList.toggle('hidden');
-        });
         // Observe semua elemen dengan class opacity-0
         document.querySelectorAll('.opacity-0').forEach(el => {
             observer.observe(el);
@@ -945,3 +941,4 @@
 </body>
 
 </html>
+
