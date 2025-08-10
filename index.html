@@ -64,6 +64,17 @@
             }
         }
 
+        .modal-enter {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.3s ease;
+        }
+
+        .modal-enter-active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
         .animate-fadeInUp {
             animation: fadeInUp 0.8s ease-out forwards;
         }
@@ -112,27 +123,27 @@
     </style>
 </head>
 
-<body class="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
+<body class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
     <!-- Navigation -->
     <nav class="fixed top-0 w-full bg-black/20 backdrop-blur-md z-50 animate-fadeInUp">
         <div class="container mx-auto px-6 py-4">
             <div class="flex justify-between items-center">
                 <!-- Logo -->
-                <h1 class="text-2xl font-bold text-purple-400">Portofolio</h1>
+                <h1 class="text-2xl font-bold text-blue-400">Portofolio</h1>
 
                 <!-- Menu -->
                 <div class="hidden md:flex space-x-6 items-center">
-                    <a href="#about" id="aboutNav" class="hover:text-purple-400 transition-colors">About</a>
+                    <a href="#about" id="aboutNav" class="hover:text-blue-400 transition-colors">About</a>
                     <a href="#experience" id="experienceNav"
-                        class="hover:text-purple-400 transition-colors">Experience</a>
-                    <a href="#education" id="educationNav" class="hover:text-purple-400 transition-colors">Education</a>
-                    <a href="#projects" id="projectsNav" class="hover:text-purple-400 transition-colors">Projects</a>
-                    <a href="#skills" id="skillsNav" class="hover:text-purple-400 transition-colors">Skills</a>
+                        class="hover:text-blue-400 transition-colors">Experience</a>
+                    <a href="#education" id="educationNav" class="hover:text-blue-400 transition-colors">Education</a>
+                    <a href="#projects" id="projectsNav" class="hover:text-blue-400 transition-colors">Projects</a>
+                    <a href="#skills" id="skillsNav" class="hover:text-blue-400 transition-colors">Skills</a>
 
                     <!-- Language Switcher -->
                     <div class="relative">
                         <button id="langBtn"
-                            class="bg-purple-600 text-white px-3 py-1 rounded-md text-sm flex items-center space-x-1 hover:bg-purple-700 transition">
+                            class="bg-blue-900 text-white px-3 py-1 rounded-md text-sm flex items-center space-x-1 hover:bg-blue-800 transition">
                             <span id="langText">EN</span>
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
@@ -143,9 +154,9 @@
                         <div id="langDropdown"
                             class="hidden absolute right-0 mt-1 bg-gray-800 text-white rounded-md shadow-lg overflow-hidden">
                             <button onclick="setLanguage('en')"
-                                class="block w-full px-4 py-2 hover:bg-purple-600 text-left">English</button>
+                                class="block w-full px-4 py-2 hover:bg-blue-900 text-left">English</button>
                             <button onclick="setLanguage('id')"
-                                class="block w-full px-4 py-2 hover:bg-purple-600 text-left">Indonesia</button>
+                                class="block w-full px-4 py-2 hover:bg-blue-900 text-left">Indonesia</button>
                         </div>
                     </div>
                 </div>
@@ -157,14 +168,14 @@
     <section class="min-h-screen flex items-center justify-center pt-20">
         <div class="text-center opacity-0 animate-fadeInUp">
             <h1
-                class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-800 to-blue-200 bg-clip-text text-transparent">
                 Muhammad Rafi Akbar
             </h1>
             <p class="text-xl md:text-2xl mb-8 text-gray-300 opacity-0 animate-fadeInUp delay-200">
                 Full Stack Developer & System Analyst
             </p>
             <div class="animate-bounce-custom opacity-0 animate-fadeInUp delay-400">
-                <svg class="w-8 h-8 mx-auto text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg class="w-8 h-8 mx-auto text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                         d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
                 </svg>
@@ -179,7 +190,7 @@
             <div class="grid md:grid-cols-2 gap-12 items-center ">
                 <div class="opacity-0 animate-slideInLeft">
                     <div class="relative">
-                        <div class="w-80 h-80 mx-auto rounded-full bg-gradient-to-r from-purple-500 to-pink-500 p-1">
+                        <div class="w-80 h-80 mx-auto rounded-full bg-gradient-to-r from-blue-900 to-blue-600 p-1">
                             <div class="w-full h-full rounded-full bg-gray-800 flex items-center justify-center">
                                 <img src="asset/fotoProfil.jpg" alt="" class="w-full h-full object-cover rounded-full">
                             </div>
@@ -187,7 +198,7 @@
                     </div>
                 </div>
                 <div class="opacity-0 animate-slideInRight delay-200">
-                    <h3 id="nameAbo" class="text-2xl font-semibold mb-6 text-purple-400">Halo! Saya Muhammad Rafi Akbar
+                    <h3 id="nameAbo" class="text-2xl font-semibold mb-6 text-blue-400">Halo! Saya Muhammad Rafi Akbar
                     </h3>
                     <p id="descAbo" class="text-gray-300 mb-6 leading-relaxed">
                         Lulusan Manajemen Informatika dari Politeknik Astra yang memiliki ketertarikan di bidang IT.
@@ -198,11 +209,11 @@
                     </p>
                     <div class="flex space-x-4">
                         <a href="file/CV - Muhammad Rafi Akbar.pdf"
-                            class="bg-purple-600 hover:bg-purple-700 px-6 py-3 rounded-lg transition-colors">
+                            class="bg-blue-900 hover:bg-blue-800 px-6 py-3 rounded-lg transition-colors">
                             <p id="cvAbo">Download CV</p>
                         </a>
                         <button id="contactBtn"
-                            class="border border-purple-600 hover:bg-purple-600 px-6 py-3 rounded-lg transition-colors">
+                            class="border border-blue-600 hover:bg-blue-900 px-6 py-3 rounded-lg transition-colors">
                             <p id="contactAbo">Contact Me</p>
                         </button>
                     </div>
@@ -211,7 +222,7 @@
         </div>
         <div id="contactModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
             <div class="bg-gray-900 p-6 rounded-lg shadow-lg text-center">
-                <h3 id="contactMod" class="text-xl font-semibold mb-4 text-purple-400">Hubungi Saya</h3>
+                <h3 id="contactMod" class="text-xl font-semibold mb-4 text-blue-400">Hubungi Saya</h3>
                 <div class="flex flex-col space-y-3">
                     <a onclick="contactWhatsApp()"
                         class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg flex items-center gap-2">
@@ -264,6 +275,40 @@
                 <button id="closeModal" class="mt-6 text-gray-400 hover:text-white">Close</button>
             </div>
         </div>
+        <!-- Modal Form Email -->
+        <div id="gmailModal" class="fixed inset-0 bg-black/50 hidden z-50 flex items-center justify-center">
+            <div class="bg-gray-900 p-6 rounded-lg shadow-lg w-96 text-white modal-enter">
+                <h3 class="text-xl font-semibold mb-4 text-blue-400">Send Email</h3>
+                <form id="emailForm" class="space-y-4">
+                    <div>
+                        <label class="block text-gray-300 mb-1">Your Name</label>
+                        <input type="text" name="name" required
+                            class="w-full px-3 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 mb-1">Your Email</label>
+                        <input type="email" name="from_email" required
+                            class="w-full px-3 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 mb-1">Subject</label>
+                        <input type="text" name="subject" required
+                            class="w-full px-3 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-gray-300 mb-1">Message</label>
+                        <textarea name="message" rows="4" required
+                            class="w-full px-3 py-2 rounded bg-gray-800 text-white border border-gray-700 focus:border-blue-500 focus:outline-none"></textarea>
+                    </div>
+                    <div class="flex justify-end space-x-3">
+                        <button type="button" id="closeGmailModal"
+                            class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded">Cancel</button>
+                        <button type="submit" class="px-4 py-2 bg-blue-900 hover:bg-blue-800 rounded">Kirim</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
 
     </section>
 
@@ -275,7 +320,7 @@
 
             <!-- Work Experience -->
             <div class="mb-16">
-                <h3 id="workExp" class="text-2xl font-semibold mb-8 text-purple-400 opacity-0 animate-slideInLeft">
+                <h3 id="workExp" class="text-2xl font-semibold mb-8 text-blue-400 opacity-0 animate-slideInLeft">
                     Pengalaman Kerja
                 </h3>
                 <div class="space-y-8">
@@ -287,7 +332,7 @@
                             </div>
                             <div class="flex-1">
                                 <h4 class="text-xl font-semibold text-white">Full Stack Developer</h4>
-                                <p class="text-purple-400 mb-2">PT Astra Honda Motor Internship • Des 2024 - Jul 2025
+                                <p class="text-blue-400 mb-2">PT Astra Honda Motor Internship • Des 2024 - Jul 2025
                                 </p>
                                 <p id="descExp" class="text-gray-300 mb-4">
                                     Mengimplementasikan background job Hangfire pada aplikasi Material Master Data
@@ -297,14 +342,14 @@
                                     intervensi manual oleh tim IT
                                 </p>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">Java
+                                    <span class="bg-blue-900/20 text-blue-300 px-3 py-1 rounded-full text-sm">Java
                                         Springboot</span>
                                     <span
-                                        class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">.NET</span>
-                                    <span class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">SQL
+                                        class="bg-blue-900/20 text-blue-300 px-3 py-1 rounded-full text-sm">.NET</span>
+                                    <span class="bg-blue-900/20 text-blue-300 px-3 py-1 rounded-full text-sm">SQL
                                         Server</span>
                                     <span
-                                        class="bg-purple-600/20 text-purple-300 px-3 py-1 rounded-full text-sm">Oracle</span>
+                                        class="bg-blue-900/20 text-blue-300 px-3 py-1 rounded-full text-sm">Oracle</span>
                                 </div>
                             </div>
                         </div>
@@ -315,7 +360,7 @@
             <!-- Organization Experience -->
             <div>
                 <h3 id="organizationExp"
-                    class="text-2xl font-semibold mb-8 text-purple-400 opacity-0 animate-slideInLeft">Pengalaman
+                    class="text-2xl font-semibold mb-8 text-blue-400 opacity-0 animate-slideInLeft">Pengalaman
                     Organisasi</h3>
                 <div class="space-y-8">
                     <div class="bg-gray-800/50 rounded-lg p-6 opacity-0 animate-slideInRight delay-100">
@@ -327,7 +372,7 @@
                                 <h4 id="positionExp" class="text-xl font-semibold text-white">Kepala Departemen
                                     Pendidikan
                                 </h4>
-                                <p class="text-purple-400 mb-2">Himpunan Mahasiswa Manajemen Informatika Politeknik
+                                <p class="text-blue-400 mb-2">Himpunan Mahasiswa Manajemen Informatika Politeknik
                                     Astra • Feb 2024 - Des 2024</p>
                                 <p id="descorgExp" class="text-gray-300 mb-4">
                                     Memimpin sebuah departemen pendidikan berisi 17 anggota aktif, Mengadakan seminar
@@ -352,13 +397,13 @@
                 <div class="bg-gray-800/50 rounded-lg p-8 opacity-0 animate-slideInUp delay-100">
                     <div class="flex items-start space-x-6">
                         <div
-                            class="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
+                            class="w-20 h-20 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0 overflow-hidden">
                             <img src="asset/astra.png" alt="" class="w-full h-full object-contain scale-110">
                         </div>
                         <div class="flex-1">
                             <h3 id="majorEdu" class="text-2xl font-semibold text-white mb-2">Diploma 3 Manajemen
                                 Informatika</h3>
-                            <p id="locationEdu" class="text-purple-400 text-lg mb-3">Politeknik Astra • 2022 - 2025</p>
+                            <p id="locationEdu" class="text-blue-400 text-lg mb-3">Politeknik Astra • 2022 - 2025</p>
                             <p id="GpaEdu" class="text-gray-300 mb-4">
                                 IPK: 3.73/4.00
                             </p>
@@ -386,8 +431,9 @@
         <div class="container mx-auto max-w-6xl">
             <h2 id="projectsSec" class="text-4xl font-bold text-center mb-16 opacity-0 animate-fadeInUp">Projects</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30 hover:border hover:border-blue-500">
                     <div
                         class="h-48 bg-white from-green-500 to-teal-500 flex items-center justify-center overflow-hidden">
                         <img src="asset/ahmLogo2.png" alt="" class="w-full h-full object-contain">
@@ -395,20 +441,20 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">Astra Honda Motor Application System Phase 3</h3>
                         <p class="text-gray-300 mb-4">
-                            <i id="descPro1">Detail project bersifat rahasia</i>
+                            <i id="descPro1"></i>
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">Springboot</span>
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">Oracle</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">Springboot</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">Oracle</span>
                         </div>
                         <div class="flex space-x-3">
-                            <a href="#" class="text-purple-400 hover:text-purple-300">Live Demo</a>
-                            <a href="#" class="text-purple-400 hover:text-purple-300">GitHub</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">Live Demo</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30 hover:border hover:border-blue-500">
                     <div
                         class="h-48 bg-white from-green-500 to-teal-500 flex items-center justify-center overflow-hidden">
                         <img src="asset/ahmLogo2.png" alt="" class="w-full h-full object-contain">
@@ -416,20 +462,20 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">Astra Honda Motor Application System Phase 2</h3>
                         <p class="text-gray-300 mb-4">
-                            <i id="descPro2">Detail project bersifat rahasia</i>
+                            <i id="descPro2"></i>
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">Springboot</span>
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">Oracle</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">Springboot</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">Oracle</span>
                         </div>
                         <div class="flex space-x-3">
-                            <a href="#" class="text-purple-400 hover:text-purple-300">Live Demo</a>
-                            <a href="#" class="text-purple-400 hover:text-purple-300">GitHub</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">Live Demo</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500 group">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30 hover:border hover:border-blue-500 group">
                     <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 relative overflow-hidden">
                         <!-- Thumbnail -->
                         <img src="asset/thIPP.png" alt="Thumbnail"
@@ -444,22 +490,21 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">IPP Performance</h3>
                         <p id="descPro3" class="text-gray-300 mb-4">
-                            Aplikasi pencatatan performa karyawan pada prodi TRPAB berbasis mobile, memudahkan
-                            monitoring performa karyawan dengan rekapitulasi setiap kegiatan.
+            
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">Java Android
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">Java Android
                                 Native</span>
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">SQL Server</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">SQL Server</span>
                         </div>
                         <div class="flex space-x-3">
-                            <a href="#" class="text-purple-400 hover:text-purple-300">Live Demo</a>
-                            <a href="#" class="text-purple-400 hover:text-purple-300">GitHub</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">Live Demo</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500 group">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30 hover:border hover:border-blue-500 group">
                     <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 relative overflow-hidden">
                         <!-- Thumbnail -->
                         <img src="asset/thTefa.png" alt="Thumbnail"
@@ -474,23 +519,21 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">Teaching Factory</h3>
                         <p id="descPro4" class="text-gray-300 mb-4">
-                            Aplikasi pendataan layanan pada sekolah SMK binaan Astra berbasis mobile, memfasilitasi
-                            proses rekapitulasi dan menghasilkan laporan transaksi pelayanan, membuat manajemen
-                            transaksi lebih efisien.
+                            
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">Java Android
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">Java Android
                                 Native</span>
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">SQL Server</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">SQL Server</span>
                         </div>
                         <div class="flex space-x-3">
-                            <a href="#" class="text-purple-400 hover:text-purple-300">Live Demo</a>
-                            <a href="#" class="text-purple-400 hover:text-purple-300">GitHub</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">Live Demo</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500 group">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30 hover:border hover:border-blue-500 group">
                     <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 relative overflow-hidden">
                         <!-- Thumbnail -->
                         <img src="asset/thSiok.png" alt="Thumbnail"
@@ -505,26 +548,23 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">Sistem Informasi Organisasi Kemahasiswaan</h3>
                         <p id="descPro5" class="text-gray-300 mb-4">
-                            Website yang memuat informasi seputar Organisasi Kemahasiswaan (ORMAWA) dan Unit Kegiatan
-                            Mahasiswa (UKM), menyediakan profil dari masing-masing ORMAWA dan UKM serta menyediakan
-                            halaman pendaftaran UKM untuk mahasiswa Politeknik Astra. Pembuatan website ini menggunakan
-                            2 versi bahasa pemrograman yang berbeda.
+                         
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">PHP Laravel</span>
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">ASP.NET Core
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">PHP Laravel</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">ASP.NET Core
                                 MVC</span>
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">SQL Server</span>
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">My SQL</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">SQL Server</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">My SQL</span>
                         </div>
                         <div class="flex space-x-3">
-                            <a href="#" class="text-purple-400 hover:text-purple-300">Live Demo</a>
-                            <a href="#" class="text-purple-400 hover:text-purple-300">GitHub</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">Live Demo</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500 group">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30 hover:border hover:border-blue-500 group">
                     <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 relative overflow-hidden">
                         <!-- Thumbnail -->
                         <img src="asset/thHalodeck.png" alt="Thumbnail"
@@ -539,25 +579,22 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">HaloDeck</h3>
                         <p id="descPro6" class="text-gray-300 mb-4">
-                            Aplikasi layanan kesehatan berbasis desktop, menyediakan berbagai layanan konsultasi,
-                            pemeriksaan, dan pembelian obat. Aplikasi ini akan memudahkan pengelolaan riwayat transaksi
-                            pasien dan pengolahan data laporan. Pembuatan aplikasi ini menggunakan 2 versi bahasa
-                            pemrograman yang berbeda.
+                            
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">Java Swing</span>
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">.NET
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">Java Swing</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">.NET
                                 WinForms</span>
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">SQL Server</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">SQL Server</span>
                         </div>
                         <div class="flex space-x-3">
-                            <a href="#" class="text-purple-400 hover:text-purple-300">Live Demo</a>
-                            <a href="#" class="text-purple-400 hover:text-purple-300">GitHub</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">Live Demo</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">GitHub</a>
                         </div>
                     </div>
                 </div>
                 <div
-                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30 hover:border hover:border-purple-500 group">
+                    class="project-card bg-gray-800/50 rounded-lg overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-blue-500/30 hover:border hover:border-blue-500 group">
                     <div class="h-48 bg-gradient-to-r from-green-500 to-teal-500 relative overflow-hidden">
                         <!-- Thumbnail -->
                         <img src="asset/thNusantari.png" alt="Thumbnail"
@@ -572,27 +609,68 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">NusanTari</h3>
                         <p id="descPro7" class="text-gray-300 mb-4">
-                            Aplikasi penyewaan sanggar tari berbasis desktop, yang dikembangkan untuk membantu karyawan
-                            menjalankan proses bisnis penyewaan studio tari. Dengan aplikasi ini, diharapkan dapat
-                            memudahkan pengelolaan data anggota, data penyewaan termasuk studio, pelatih dan kostum,
-                            pencatatan reservasi, dan pembuatan laporan. Pembuatan aplikasi ini menggunakan 2 versi
-                            bahasa pemrograman yang berbeda.
+                            
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">C</span>
-                            <span class="bg-purple-600/20 text-purple-300 px-2 py-1 rounded text-sm">VBA</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">C</span>
+                            <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">VBA</span>
                         </div>
                         <div class="flex space-x-3">
-                            <a href="#" class="text-purple-400 hover:text-purple-300">Live Demo</a>
-                            <a href="#" class="text-purple-400 hover:text-purple-300">GitHub</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">Live Demo</a>
+                            <a href="#" class="text-blue-400 hover:text-blue-300">GitHub</a>
                         </div>
                     </div>
                 </div>
 
             </div>
         </div>
-    </section>
+        <!-- Modal Project Detail -->
+        <div id="projectModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+            <div
+                class="bg-gray-900 rounded-lg shadow-lg w-11/12 lg:w-3/4 max-h-[90vh] overflow-hidden animate-fadeInUp relative">
+                <button id="closeProjectModal" class="absolute top-3 right-3 text-white text-2xl hover:text-blue-400">
+                    &times;
+                </button>
+                <div class="grid md:grid-cols-2">
+                    <!-- Kiri: Carousel -->
+                    <div class="relative bg-black">
+                        <div id="carouselImages" class="relative w-full h-[400px] overflow-hidden bg-black flex items-center justify-center">
+                            <!-- Slides -->
+                        </div>
+                        <!-- Tombol Prev -->
+                        <button id="prevSlide"
+                            class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-black/50 text-white px-2 py-1 rounded-full">
+                            &#10094;
+                        </button>
+                        <!-- Tombol Next -->
+                        <button id="nextSlide"
+                            class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-black/50 text-white px-2 py-1 rounded-full">
+                            &#10095;
+                        </button>
+                    </div>
 
+                    <!-- Kanan: Detail -->
+                    <div class="p-6 flex flex-col justify-between max-h-[45vh]">
+                        <!-- Bungkus konten atas dengan scroll -->
+                        <div class="overflow-y-auto pr-2 flex-1">
+                            <h2 id="modalTitle" class="text-2xl font-bold text-blue-400 mb-4"></h2>
+                            <p id="modalDesc" class="text-gray-300 mb-6"></p>
+                            <div id="modalTech" class="flex flex-wrap gap-2 mb-6"></div>
+                        </div>
+                        <!-- Tombol di bawah -->
+                        <!-- <div class="flex space-x-3 mt-4">
+                            <a id="modalLive" href="#" target="_blank"
+                                class="bg-blue-900 hover:bg-blue-800 text-white px-4 py-2 rounded">Live Demo</a>
+                            <a id="modalGithub" href="#" target="_blank"
+                                class="border border-blue-600 hover:bg-blue-900 px-4 py-2 rounded">GitHub</a>
+                        </div> -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
     <!-- Skills Section -->
     <section id="skills" class="py-20 px-6">
         <div class="container mx-auto max-w-6xl">
@@ -773,7 +851,7 @@
         <div class="container mx-auto max-w-6xl">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <div class="opacity-0 animate-fadeInUp delay-100">
-                    <h3 id="contactFoo" class="text-xl font-semibold mb-4 text-purple-400">Kontak</h3>
+                    <h3 id="contactFoo" class="text-xl font-semibold mb-4 text-blue-400">Kontak</h3>
                     <div class="space-y-2 text-gray-300">
                         <p>📧 rafiakbar2525@gmail.com</p>
                         <p>📱 +62 813-1697-5711</p>
@@ -781,10 +859,10 @@
                     </div>
                 </div>
                 <div class="opacity-0 animate-fadeInUp delay-200">
-                    <h3 id="socialFoo" class="text-xl font-semibold mb-4 text-purple-400">Social Media</h3>
+                    <h3 id="socialFoo" class="text-xl font-semibold mb-4 text-blue-400">Social Media</h3>
                     <div class="flex space-x-4">
                         <a href="https://www.instagram.com/rafiakbarrr___/" target="_blank"
-                            class="text-gray-300 hover:text-purple-400 transition-colors">
+                            class="text-gray-300 hover:text-blue-400 transition-colors">
                             <svg role="img" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                                 class="w-6 h-6">
                                 <path
@@ -792,7 +870,7 @@
                             </svg>
                         </a>
                         <a href="https://www.linkedin.com/in/muhammad-rafi-akbar-715484219/" target="_blank"
-                            class="text-gray-300 hover:text-purple-400 transition-colors">
+                            class="text-gray-300 hover:text-blue-400 transition-colors">
                             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -802,16 +880,16 @@
                     </div>
                 </div>
                 <div class="opacity-0 animate-fadeInUp delay-300">
-                    <h3 id="linkFoo" class="text-xl font-semibold mb-4 text-purple-400">Quick Links</h3>
+                    <h3 id="linkFoo" class="text-xl font-semibold mb-4 text-blue-400">Quick Links</h3>
                     <div class="space-y-2">
                         <a id="aboutFoo" href="#about"
-                            class="block text-gray-300 hover:text-purple-400 transition-colors">About</a>
+                            class="block text-gray-300 hover:text-blue-400 transition-colors">About</a>
                         <a id="experienceFoo" href="#experience"
-                            class="block text-gray-300 hover:text-purple-400 transition-colors">Experience</a>
+                            class="block text-gray-300 hover:text-blue-400 transition-colors">Experience</a>
                         <a id="projectsFoo" href="#projects"
-                            class="block text-gray-300 hover:text-purple-400 transition-colors">Projects</a>
+                            class="block text-gray-300 hover:text-blue-400 transition-colors">Projects</a>
                         <a id="skillsFoo" href="#skills"
-                            class="block text-gray-300 hover:text-purple-400 transition-colors">Skills</a>
+                            class="block text-gray-300 hover:text-blue-400 transition-colors">Skills</a>
                     </div>
                 </div>
             </div>
@@ -822,12 +900,180 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const contactBtn = document.getElementById("contactBtn");
         const contactModal = document.getElementById("contactModal");
         const closeModal = document.getElementById("closeModal");
+        const gmailModal = document.getElementById("gmailModal");
+        const closeGmailModal = document.getElementById("closeGmailModal");
+        let currentSlide = 0;
+
+        // Data project
+        const projects = [
+            {
+                title: "Astra Honda Motor Application System Phase 3",
+                desc: "Project details are confidential",
+                images: ["asset/ahmLogo2.png"],
+                tech: ["Java Android Native", "SQL Server"],
+                live: "#",
+                github: "#"
+            },
+            {
+                title: "Astra Honda Motor Application System Phase 2",
+                desc: "Project details are confidential",
+                images: ["asset/ahmLogo2.png"],
+                tech: ["Java Android Native", "SQL Server"],
+                live: "#",
+                github: "#"
+            },
+            {
+                title: "IPP Performance",
+                desc: "The mobile-based employee performance recording application for the TRPAB study program makes it easier to monitor employee performance by summarizing each activity.",
+                images: ["asset/ipp.png", "asset/ipp2.png", "asset/ipp3.png"],
+                tech: ["Java Android Native", "SQL Server"],
+                live: "#",
+                github: "#"
+            },
+            {
+                title: "Teaching Factory",
+                desc: "The mobile-based service data collection application at Astra-supported vocational schools facilitates the recapitulation process and generates service transaction reports, making transaction management more efficient.",
+                images: ["asset/tefa.png", "asset/tefa2.png", "asset/tefa3.png"],
+                tech: ["Java Android Native", "SQL Server"],
+                live: "#",
+                github: "#"
+            },
+            {
+                title: "Sistem Informasi Organisasi Kemahasiswaan",
+                desc: "This website contains information about Student Organizations (ORMAWA) and Student Activity Units (UKM). It also provides profiles of each ORMAWA and UKM, as well as a UKM registration page for Astra Polytechnic students. The website was created using two different programming languages.",
+                images: ["asset/siok.png", "asset/siok2.png", "asset/siok3.png", "asset/siok4.png", "asset/siok5.png", "asset/siok6.png"],
+                tech: ["PHP Laravel", "SQL Server", "ASP.NET Core MVC", "MySQL"],
+                live: "#",
+                github: "#"
+            },
+            {
+                title: "HaloDeck",
+                desc: "This desktop-based healthcare application provides a variety of consultations, examinations, and medication purchasing services. It simplifies the management of patient transaction history and reporting data. The application was developed using two different programming languages.",
+                images: ["asset/halodeck2.png", "asset/halodeck.png", "asset/halodeck3.png","asset/halodeck4.png", "asset/halodeck5.png", "asset/halodeck6.png"],
+                tech: ["Java Swing", "SQL Server", ".NET WinForms"],
+                live: "#",
+                github: "#"
+            },
+            {
+                title: "NusanTari",
+                desc: "A desktop-based dance studio rental application developed to assist employees in managing the dance studio rental business process. This application is expected to simplify the management of member data, rental data including studios, instructors, and costumes, reservation recording, and reporting. The application was developed using two different programming languages.",
+                images: ["asset/nusantari2.png", "asset/nusantari3.png", "asset/nusantari4.png"],
+                tech: ["C", "VBA"],
+                live: "#",
+                github: "#"
+            }
+        ];
+
         let translations = {};
+
+        function renderCarousel(images) {
+            const carousel = document.getElementById("carouselImages");
+            carousel.innerHTML = images.map((src, i) => `
+            <div class="slide w-full h-80 ${i === 0 ? '' : 'hidden'}">
+            <img src="${src}" class="w-full h-full object-contain bg-black">
+            </div>
+            `).join("");
+        }
+        function changeSlide(dir) {
+            const slides = document.querySelectorAll("#carouselImages .slide");
+            slides[currentSlide].classList.add("hidden");
+            currentSlide = (currentSlide + dir + slides.length) % slides.length;
+            slides[currentSlide].classList.remove("hidden");
+        }
+        document.getElementById("prevSlide").addEventListener("click", () => changeSlide(-1));
+        document.getElementById("nextSlide").addEventListener("click", () => changeSlide(1));
+        document.getElementById("closeProjectModal").addEventListener("click", closeProjectModal);
+
+        // Klik di luar konten modal untuk close
+        document.getElementById("projectModal").addEventListener("click", function (e) {
+            if (e.target === this) {
+                closeProjectModal();
+            }
+        });
+
+
+        function openProjectModal(index) {
+            const p = projects[index];
+
+            document.getElementById("modalTitle").textContent = p.title;
+            document.getElementById("modalDesc").textContent = p.desc;
+
+            // Render carousel
+            renderCarousel(p.images);
+            currentSlide = 0;
+
+            // Isi teknologi
+            const techContainer = document.getElementById("modalTech");
+            techContainer.innerHTML = "";
+            p.tech.forEach(t => {
+                techContainer.innerHTML += `<span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">${t}</span>`;
+            });
+
+            // Link
+            //document.getElementById("modalLive").href = p.live;
+           // document.getElementById("modalGithub").href = p.github;
+
+            // Show modal
+            document.getElementById("projectModal").classList.remove("hidden");
+            document.getElementById("projectModal").classList.add("flex");
+        }
+
+        function closeProjectModal() {
+            const modal = document.getElementById("projectModal");
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        }
+
+        // Inisialisasi EmailJS
+        (function () {
+            emailjs.init("GNmXoBgDWC3HeWVga"); // Ganti dengan Public Key dari EmailJS
+        })();
+
+        // Buka modal email
+        function contactEmail() {
+            gmailModal.classList.remove("hidden");
+            setTimeout(() => {
+                gmailModal.querySelector("div").classList.add("modal-enter-active");
+            }, 10);
+        }
+
+        // Tutup modal email
+        closeGmailModal.addEventListener("click", () => {
+            gmailModal.querySelector("div").classList.remove("modal-enter-active");
+            setTimeout(() => {
+                gmailModal.classList.add("hidden");
+            }, 300);
+        });
+
+        // Kirim email via EmailJS
+        document.getElementById("emailForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            emailjs.sendForm("service_mj35q1m", "template_08egzg8", this)
+                .then(function () {
+                    this.reset();
+                    closeGmailModal.click();
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Berhasil!',
+                        text: 'Pesan berhasil dikirim.',
+                        timer: 2000,
+                        showConfirmButton: false
+                    });
+                }, function (error) {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Gagal!',
+                        text: 'Pesan gagal dikirim: ' + error.text
+                    });
+                });
+        });
 
         // Ambil file JSON
         fetch('lang.json')
@@ -871,6 +1117,7 @@
             document.getElementById('descPro4').textContent = translations[lang].descPro4;
             document.getElementById('descPro5').textContent = translations[lang].descPro5;
             document.getElementById('descPro6').textContent = translations[lang].descPro6;
+            document.getElementById('descPro7').textContent = translations[lang].descPro7;
             document.getElementById('skillsSec').textContent = translations[lang].skillsSec;
             document.getElementById('contactFoo').textContent = translations[lang].contactFoo;
             document.getElementById('socialFoo').textContent = translations[lang].socialFoo;
@@ -927,6 +1174,9 @@
             observer.observe(el);
         });
 
+        document.querySelectorAll(".project-card").forEach((card, index) => {
+            card.addEventListener("click", () => openProjectModal(index));
+        });
         document.querySelectorAll('.project-card').forEach(card => {
             const video = card.querySelector('video');
 
@@ -959,13 +1209,6 @@
             let url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
             // Buka di tab baru
-            window.open(url, '_blank');
-        }
-        function contactEmail() {
-            let email = "rafiakbar2525@gmail.com";
-            let subject = "Halo Rafi";
-            let body = "Halo, saya ingin menghubungi Anda.";
-            let url = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
             window.open(url, '_blank');
         }
 
