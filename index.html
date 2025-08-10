@@ -490,7 +490,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">IPP Performance</h3>
                         <p id="descPro3" class="text-gray-300 mb-4">
-            
+
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">Java Android
@@ -519,7 +519,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">Teaching Factory</h3>
                         <p id="descPro4" class="text-gray-300 mb-4">
-                            
+
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">Java Android
@@ -548,7 +548,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">Sistem Informasi Organisasi Kemahasiswaan</h3>
                         <p id="descPro5" class="text-gray-300 mb-4">
-                         
+
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">PHP Laravel</span>
@@ -579,7 +579,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">HaloDeck</h3>
                         <p id="descPro6" class="text-gray-300 mb-4">
-                            
+
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">Java Swing</span>
@@ -609,7 +609,7 @@
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-3">NusanTari</h3>
                         <p id="descPro7" class="text-gray-300 mb-4">
-                            
+
                         </p>
                         <div class="flex flex-wrap gap-2 mb-4">
                             <span class="bg-blue-900/20 text-blue-300 px-2 py-1 rounded text-sm">C</span>
@@ -634,7 +634,8 @@
                 <div class="grid md:grid-cols-2">
                     <!-- Kiri: Carousel -->
                     <div class="relative bg-black">
-                        <div id="carouselImages" class="relative w-full h-[400px] overflow-hidden bg-black flex items-center justify-center">
+                        <div id="carouselImages"
+                            class="relative w-full h-[400px] overflow-hidden bg-black flex items-center justify-center">
                             <!-- Slides -->
                         </div>
                         <!-- Tombol Prev -->
@@ -902,6 +903,8 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.3/dist/vanilla-tilt.min.js"></script>
+
     <script>
         const contactBtn = document.getElementById("contactBtn");
         const contactModal = document.getElementById("contactModal");
@@ -910,6 +913,12 @@
         const closeGmailModal = document.getElementById("closeGmailModal");
         let currentSlide = 0;
 
+        VanillaTilt.init(document.querySelectorAll(".project-card"), {
+            max: 15,        // derajat kemiringan maksimal
+            speed: 400,     // kecepatan animasi
+            glare: true,    // efek cahaya
+            "max-glare": 0.3 // intensitas glare
+        });
         // Data project
         const projects = [
             {
@@ -955,7 +964,7 @@
             {
                 title: "HaloDeck",
                 desc: "This desktop-based healthcare application provides a variety of consultations, examinations, and medication purchasing services. It simplifies the management of patient transaction history and reporting data. The application was developed using two different programming languages.",
-                images: ["asset/halodeck2.png", "asset/halodeck.png", "asset/halodeck3.png","asset/halodeck4.png", "asset/halodeck5.png", "asset/halodeck6.png"],
+                images: ["asset/halodeck2.png", "asset/halodeck.png", "asset/halodeck3.png", "asset/halodeck4.png", "asset/halodeck5.png", "asset/halodeck6.png"],
                 tech: ["Java Swing", "SQL Server", ".NET WinForms"],
                 live: "#",
                 github: "#"
@@ -1017,7 +1026,7 @@
 
             // Link
             //document.getElementById("modalLive").href = p.live;
-           // document.getElementById("modalGithub").href = p.github;
+            // document.getElementById("modalGithub").href = p.github;
 
             // Show modal
             document.getElementById("projectModal").classList.remove("hidden");
