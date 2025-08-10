@@ -1063,10 +1063,10 @@
         // Kirim email via EmailJS
         document.getElementById("emailForm").addEventListener("submit", function (e) {
             e.preventDefault();
-
+            const form = this;
             emailjs.sendForm("service_mj35q1m", "template_08egzg8", this)
                 .then(function () {
-                    this.reset();
+                    form.reset();
                     closeGmailModal.click();
                     Swal.fire({
                         icon: 'success',
